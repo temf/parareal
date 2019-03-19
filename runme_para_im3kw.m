@@ -32,7 +32,7 @@ opt_c    = struct('Verbose',0,'TimeStep',1e-3,...
 % A.3. Parameters for Parareal
 opt_para   = struct('NProc',20,'NIter',20,'Verbose','on',...
                   'OutputSel',1,'OutputFcn',[],...
-                  'AbsTol',1e-3,'RelTol',1e-3);
+                  'AbsTol',1.5e-5,'RelTol',1.5e-5);
 % A.4. Parameters for GetDP
 opt_getdp  = {'Flag_AnalysisType',1,...
               'Flag_NL',1,...
@@ -64,12 +64,15 @@ plot(sol_seq.x,sol_seq.y(1,:),...
      sol_para.x,sol_para.y(1,:)); % plot 1st component of solutions
 title('Solution');
 xticks(trange(1):opt_c.TimeStep:trange(end))
+xtickangle(45)
 grid
+axis tight
 legend(['sequential ' num2str(opt_f.TimeStep,'%1.2e')],'parareal')
 xlabel('time / s')
 ylabel('magnetic vector potential / Wb')
+
 figure; 
-semilogy(1:length(sol_para.err),sol_para.err,'*-');
+semilogy(1:length(sol_para.err)-1,sol_para.err(2:end),'*-');
 title('Convergence');
 xlabel('iteration')
 ylabel('error')
