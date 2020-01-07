@@ -725,7 +725,7 @@ Resolution {
 
       If(Flag_AnalysisType==1)
         InitSolution[A];
-        //SaveSolution[A];
+        SaveSolution[A];
         InitMovingBand2D[MB];
 
         If(!Flag_ImposedSpeed) // Full dynamics
@@ -784,7 +784,6 @@ Resolution {
             Evaluate[ $PreviousPosition = $Position ];
           EndIf
           MeshMovingBand2D[MB] ;
-        }
         }
         If(!Flag_SaveAllSteps)
           SaveSolution[A]; //save solution only at the end
