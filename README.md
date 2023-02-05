@@ -4,7 +4,7 @@ This repository contains the main source code of the algorithm documented in the
 
 ## Getting Started
 
-* [GetDP](http://getdp.info) - Finite element solver
+* [GetDP](http://getdp.info) - Finite element solver (version <3.0.0)
 * [Octave](https://www.octave.org) - Interpreter
 * [Parallel](https://octave.sourceforge.io/parallel/) - Parallel execution package for Octave
 
