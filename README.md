@@ -31,3 +31,9 @@ This project is licensed under the terms of the GNU General Public License (GPL)
 * the authors like to thank J. Corno for several code beautifications
 * the software GetDP was mainly written by P. Dular and C. Geuzaine, University of Liege
 * the model im_3kW is modified but originally part of the GetDP distribution. The authors are J. Gyselinck and R.V. Sabariego
+
+## Miscellaneous
+
+### Python Proof of Concept
+
+A Python implementation of Parareal using GetDP to integrate initial value problems can be found in the folder `python_poc`. It is under active development. At the moment of writing, it does not solve the same electric machine problem but a simplified thermal problem.
